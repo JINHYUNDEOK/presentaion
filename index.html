@@ -249,6 +249,45 @@
       object-fit: cover;
       display: block;
     }
+    .donut-wrap {
+      display: grid;
+      place-items: center;
+      height: 100%;
+      min-height: 42vh;
+      border-radius: 30px;
+      background: rgba(255,255,255,.58);
+      border: 1px solid rgba(255,255,255,.78);
+      box-shadow: 0 24px 58px rgba(31,46,68,.08);
+    }
+    .donut {
+      width: min(30vw, 360px);
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: conic-gradient(var(--cyan) 0 90%, var(--amber) 90% 100%);
+      position: relative;
+      box-shadow: 0 28px 60px rgba(8,175,197,.16);
+    }
+    .donut::after {
+      content: "";
+      position: absolute;
+      inset: 18%;
+      border-radius: 50%;
+      background: rgba(255,255,255,.92);
+    }
+    .donut-label {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      z-index: 1;
+      font-weight: 950;
+      color: var(--ink);
+      letter-spacing: -.05em;
+      line-height: 1;
+    }
+    .donut-label strong { display:block; font-size: clamp(58px, 6vw, 112px); }
+    .donut-label span { display:block; margin-top:.4vh; font-size: clamp(18px, 1.3vw, 25px); color: var(--muted); letter-spacing: -.02em; }
 
     .image-stage {
       width: 100%;
@@ -564,7 +603,7 @@
             <img src="assets/image8.png" alt="경주 방폐장 동굴처분시설 내부 사진">
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 이미지, 경주 방폐장 동굴처분시설 내부</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -573,7 +612,7 @@
       <div class="canvas">
         <div class="kicker">목차와 발표 분담</div>
         <h2>세 파트로 나눈 자료조사와 발표 흐름</h2>
-        <p class="subtitle">DOCX 지정 구성: 3~10 정은희, 11~16 최재웅, 17~24 이진우</p>
+        <p class="subtitle">배경·분류 → 처분·처리기술 → 시설·환경·과제 순서로 정리</p>
         <div class="intro-grid">
           <div class="role-card">
             <div>
@@ -615,7 +654,7 @@
             <span>시설 안전성과 사회적 과제 정리</span>
           </div>
         </div>
-        <div class="source">구성: 사용자 제공 DOCX의 슬라이드 지정 순서 반영</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -636,10 +675,10 @@
             <div class="image-stage contain" style="height:34vh; min-height:0">
               <img src="assets/image6.png" alt="원전 부지별 중저준위 폐기물 저장 포화율 표">
             </div>
-            <div class="metric" style="margin-top:2vh"><strong>72.2%</strong><span>DOCX 제공 표 기준 전체 평균 저장 포화율</span></div>
+            <div class="metric" style="margin-top:2vh"><strong>72.2%</strong><span>원전 부지별 임시저장 표 기준 전체 평균 포화율</span></div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 표 / 원자료 후보: KHNP 원전 방사성폐기물 관리현황</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -654,7 +693,7 @@
           <div class="card blue"><h3>차폐</h3><p>콘크리트·납·철 등으로 방사선 외부 방출 억제</p></div>
         </div>
         <p class="big-quote" style="margin-top:6vh">관리 기준은 침출수보다<br><span class="red-text">방사선 차폐와 핵종 유출 방지</span></p>
-        <div class="source">근거: KORAD 중저준위방폐물 정의, IAEA SSR-5 안전 요구사항</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -672,7 +711,7 @@
           <b>핵심 문장</b>
           <p>모든 방폐물을 같은 방식으로 관리하면 과도한 비용과 부지 부담 발생</p>
         </div>
-        <div class="source">근거: 사용자 DOCX, KORAD 중저준위방폐물 관리 개요</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -692,7 +731,7 @@
           <div class="step" style="border-color:var(--green)"><b>저준위</b><p>표층처분</p></div>
           <div class="step" style="border-color:var(--cyan)"><b>극저준위</b><p>매립형 처분</p></div>
         </div>
-        <div class="source">근거: 국가법령정보센터 원자력안전법, NSSC 고시, KORAD</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -702,15 +741,18 @@
         <div class="kicker">정은희 · 7p</div>
         <h2>발생원은 원전 중심이지만 의료·연구·산업까지 확장</h2>
         <div class="grid-2">
-          <div class="image-stage contain">
-            <img src="assets/image12.png" alt="방사성폐기물 관리 흐름도">
+          <div class="donut-wrap">
+            <div class="donut">
+              <div class="donut-label"><strong>90%+</strong><span>원전 운영·정비·해체</span></div>
+            </div>
           </div>
           <div>
-            <div class="metric"><strong>90%+</strong><span>DOCX 기준 국내 방폐물 대부분은 원전 운영·정비·해체 과정에서 발생</span></div>
-            <div class="card green" style="margin-top:2vh"><h3>비원전 분야</h3><p>병원 RI, 연구소, 비파괴검사, 제품 멸균 등에서도 지속 발생</p></div>
+            <div class="card cyan"><h3>원자력 발전소</h3><p>정상 운영, 계획예방정비, 해체 과정에서 작업복·필터·수지·금속류 발생</p></div>
+            <div class="card green" style="margin-top:2vh"><h3>비원전 분야</h3><p>병원 RI, 연구소 핵물질 연구, 산업체 비파괴검사와 제품 멸균</p></div>
+            <div class="card amber" style="margin-top:2vh"><h3>핵심 해석</h3><p>대부분은 원전에서 발생하지만, 관리 범위는 의료·연구·산업까지 확장</p></div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 관리체계 도식 / 근거: 사용자 DOCX, KORAD</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -727,7 +769,7 @@
           <div class="card amber"><h3>해체 변수</h3><p>노후 원전 해체 시 대형 폐기물 일시 증가 가능</p></div>
           <div class="card green"><h3>그래프 해석</h3><p>시설별 차이와 원전 외 발생원까지 함께 확인</p></div>
         </div>
-        <div class="source">이미지: 사용자 제공 PDF 내부 WACID 그래프 캡처</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -742,7 +784,7 @@
           <div class="card green"><h3>방폐물 관리법</h3><p>국가 기본계획, 관리기금, 처분사업 추진 근거</p></div>
         </div>
         <p class="big-quote" style="margin-top:6vh">관리 체계는 <span class="accent">기관</span>, <span class="green-text">법</span>, <span class="amber-text">재원</span>, <span class="red-text">시설</span>의 결합</p>
-        <div class="source">근거: KORAD 기본정책, 원자력안전법, 방사성폐기물 관리법</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -764,7 +806,7 @@
             <div class="step" style="border-color:var(--cyan); min-height:12vh"><b>감시</b><p>지하수·토양·공기</p></div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 관리 흐름도 / 근거: KORAD 중·저준위 방폐물 인도 기준 및 전주기 관리 프로세스</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -782,7 +824,7 @@
             <img src="assets/image10.png" alt="KORAD 동굴처분과 표층처분 방식 설명 이미지">
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 KORAD 설명 이미지 / 근거: KORAD 처분방식</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -809,7 +851,7 @@
             </div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 동굴처분 구조도 및 내부 사진 / 근거: KORAD, 영남일보, 한겨레</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -828,7 +870,7 @@
             <div class="card green" style="margin-top:2vh"><h3>적용 대상</h3><p>작업복, 장갑, 필터, 교체 부품 등 저준위 중심</p></div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 사진 / 원문 출처 후보: Centre de l'Aube 관련 자료</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -844,7 +886,7 @@
           <div class="card cyan"><h3>낮은 위험도</h3><p>매립형·표층·동굴 처분 등 천층 처분 중심</p></div>
           <div class="card red"><h3>높은 위험도</h3><p>심층처분처럼 더 긴 격리 기간과 높은 차폐 요구</p></div>
         </div>
-        <div class="source">이미지: IAEA e-learning course thumbnail</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -863,7 +905,7 @@
             <img src="assets/image5.png" alt="마이크로파 기반 C-14 분리 장치">
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 이미지 / 출처 후보: CCN뉴스 KAERI 관련 기사</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -885,7 +927,7 @@
             </ul>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 KAERI 개발 우라늄폐기물 처리기술 도식 / 출처 후보: 연합뉴스</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -904,7 +946,7 @@
             <div class="card green" style="margin-top:2vh"><h3>다중 방벽</h3><p>자연 암반과 콘크리트 구조물로 생활권과 격리</p></div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 경주 방폐장 내부 사진 / 근거: 사용자 DOCX</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -928,7 +970,7 @@
           </div>
         </div>
         <p class="big-quote" style="margin-top:3.5vh">공통점은 <span class="accent">장기 격리</span>와 <span class="green-text">환경 감시</span>, 차이는 <span class="amber-text">지질 조건</span></p>
-        <div class="source">이미지: DOE WIPP, JNFL disposal, ENRESA El Cabril / 근거: 사용자 제공 DOCX의 해외 주요시설 비교 대본</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -946,7 +988,7 @@
           <b>사회적 기준</b>
           <p>부지 선정은 기술 검토만이 아니라 주민 신뢰와 동의 확보까지 포함</p>
         </div>
-        <div class="source">근거: 사용자 제공 DOCX의 입지 선정 기준 대본</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -960,7 +1002,7 @@
           <div class="card amber"><h3>다중 방벽</h3><p>고형화체, 금속용기, 콘크리트, 암반이 연속 차폐</p></div>
           <div class="card green"><h3>환경 감시</h3><p>지하수, 토양, 해수, 공기, 주변 방사선 수치 장기 확인</p></div>
         </div>
-        <div class="source">근거: 사용자 제공 DOCX, KORAD 기본정책</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -975,7 +1017,7 @@
           <div class="card green"><h3>장기 모니터링</h3><p>환경 보호와 주민 안전 확보를 지속적으로 입증</p></div>
         </div>
         <p class="big-quote" style="margin-top:6vh">국제 기준은 규정 이행을 넘어<br><span class="accent">지속 가능한 원자력 운영의 조건</span></p>
-        <div class="source">근거: IAEA Safety Standards SSR-5, 사용자 DOCX</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -992,7 +1034,7 @@
           <div class="step" style="border-color:var(--red)"><b>처분</b><p>동굴·표층·매립형</p></div>
           <div class="step" style="border-color:var(--cyan)"><b>사후관리</b><p>지하수·토양·방사선 감시</p></div>
         </div>
-        <div class="source">근거: 사용자 제공 DOCX의 전 과정 요약 대본</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -1007,7 +1049,7 @@
           <div class="card green"><h3>시설 확충</h3><p>1단계 동굴처분 이후 2·3단계 처분시설 확장 필요</p></div>
         </div>
         <p class="big-quote" style="margin-top:6vh">시설 확충만으로 부족하고<br><span class="green-text">처분기술·환경감시·주민 신뢰</span>가 함께 필요</p>
-        <div class="source">근거: 사용자 제공 DOCX, 정책브리핑 제3차 기본계획</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
@@ -1022,7 +1064,7 @@
           <div class="card green"><h3>주민 동의</h3><p>정보 공개, 안전성 검증, 장기 소통으로 신뢰 형성</p></div>
         </div>
         <p class="big-quote" style="margin-top:5vh">최종 메시지: <span class="amber-text">기술적 안전성 + 시설 확보 + 주민 신뢰</span></p>
-        <div class="source">근거: 사용자 제공 DOCX의 24p 대본</div>
+        <div class="source"></div>
         <div class="progress"></div>
       </div>
     </section>
