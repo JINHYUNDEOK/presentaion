@@ -117,17 +117,17 @@
 
     h1, h2, h3, p { margin: 0; }
     h1 {
-      font-size: clamp(58px, 6.5vw, 112px);
-      line-height: .96;
+      font-size: clamp(46px, 5.6vw, 94px);
+      line-height: .98;
       letter-spacing: -.06em;
       font-weight: 900;
     }
     h2 {
-      font-size: clamp(34px, 3.6vw, 66px);
-      line-height: 1.06;
+      font-size: clamp(29px, 3.05vw, 54px);
+      line-height: 1.1;
       letter-spacing: -.045em;
       font-weight: 900;
-      max-width: 78%;
+      max-width: 88%;
     }
     h3 {
       font-size: clamp(24px, 2vw, 38px);
@@ -136,11 +136,11 @@
       font-weight: 900;
     }
     .subtitle {
-      margin-top: 2.1vh;
-      font-size: clamp(17px, 1.35vw, 26px);
-      line-height: 1.48;
+      margin-top: 1.7vh;
+      font-size: clamp(16px, 1.22vw, 23px);
+      line-height: 1.42;
       color: var(--muted);
-      max-width: 72%;
+      max-width: 82%;
       font-weight: 600;
     }
     .dark .subtitle, .dark .kicker { color: #c7d4e7; }
@@ -161,22 +161,7 @@
     }
 
     .mark {
-      position: absolute;
-      right: 4.4vw;
-      top: 4.6vh;
-      width: 54px;
-      height: 54px;
-      border-radius: 50%;
-      background: rgba(255,255,255,.44);
-      border: 1px solid rgba(255,255,255,.58);
-      box-shadow: 0 14px 34px rgba(31,46,68,.10);
-      backdrop-filter: blur(14px);
-      display: grid;
-      place-items: center;
-      color: var(--amber);
-      font-size: 28px;
-      font-weight: 900;
-      z-index: 4;
+      display: none;
     }
 
     .grid-2 {
@@ -388,7 +373,7 @@
 
     .split-dark {
       display: grid;
-      grid-template-columns: .9fr 1.1fr;
+      grid-template-columns: .95fr 1.05fr;
       gap: 4vw;
       align-items: center;
       height: 100%;
@@ -432,10 +417,9 @@
     }
 
     .qr-note {
-      position: absolute;
-      right: 5vw;
-      top: 15vh;
-      width: min(30vw, 460px);
+      position: relative;
+      width: min(64vw, 760px);
+      margin-top: 3vh;
       padding: 1.6rem;
       border-radius: 24px;
       background: rgba(18,28,49,.82);
@@ -556,14 +540,14 @@
         <div class="mark">▲</div>
         <div class="split-dark">
           <div>
-            <div class="kicker">RADIATION ENVIRONMENT · 20 MIN</div>
+            <div class="kicker">중·저준위 방사성폐기물</div>
             <h1>중·저준위<br>방사성폐기물<br>관리</h1>
-            <p class="subtitle">발생 배경부터 처분기술, 경주 방폐장, 환경 영향과 사회적 수용성까지</p>
+            <p class="subtitle">발생 배경부터 처분 방식, 처리기술, 환경 감시까지</p>
             <div class="pill-row">
               <span class="pill">정은희</span><span class="pill">최재웅</span><span class="pill">이진우</span>
             </div>
           </div>
-          <div class="image-stage">
+          <div class="image-stage" style="height:62vh; min-height:0">
             <img src="assets/image8.png" alt="경주 방폐장 동굴처분시설 내부 사진">
           </div>
         </div>
@@ -576,8 +560,8 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">PRESENTATION MAP</div>
-        <h2>발표는 세 파트로 나누고, 마지막에 전체 메시지로 묶습니다</h2>
-        <p class="subtitle">자료조사 분담 구조를 발표 흐름과 연결해서 보여주는 소개 페이지입니다.</p>
+        <h2>세 파트로 보는 발표 구조</h2>
+        <p class="subtitle">자료조사 분담 구조와 발표 흐름 연결</p>
         <div class="intro-grid">
           <div class="role-card">
             <div>
@@ -629,7 +613,7 @@
         <div class="mark">▲</div>
         <div class="kicker">오늘의 흐름</div>
         <h2>배경 → 분류 → 처리·처분 → 시설 → 과제</h2>
-        <p class="subtitle">20분 발표이므로 한 슬라이드당 하나의 질문만 답합니다.</p>
+        <p class="subtitle">문제 배경에서 국내 관리체계와 남은 과제까지 순서대로 정리</p>
         <div class="agenda-board">
           <div class="agenda-item">
             <div class="agenda-num">1</div>
@@ -661,13 +645,13 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">배경</div>
-        <h2>원전 역할이 커질수록 방폐물 관리는 뒤따라 커지는 인프라 문제</h2>
+        <h2>원전 역할 확대와 함께 커지는 방폐물 관리 수요</h2>
         <div class="grid-3">
           <div class="card cyan"><h3>탄소중립</h3><p>저탄소 전원으로서 원전의 역할이 다시 강조됨</p></div>
           <div class="card amber"><h3>에너지 안보</h3><p>전력 공급 안정성을 이유로 계속운전 논의 확대</p></div>
           <div class="card green"><h3>누적 관리</h3><p>운영·정비·해체 과정에서 중·저준위 폐기물이 계속 발생</p></div>
         </div>
-        <p class="big-quote" style="margin-top:6vh">핵심은 <span class="accent">발전량</span>이 아니라<br><span class="amber-text">폐기물의 이동·저장·처분 경로</span>입니다.</p>
+        <p class="big-quote" style="margin-top:6vh">핵심은 <span class="accent">발전량</span>이 아니라<br><span class="amber-text">폐기물의 이동·저장·처분 경로</span></p>
         <div class="source">근거: 사용자 DOCX, KHNP 공공데이터포털 관리현황 설명</div>
         <div class="progress">03 / 20</div>
       </div>
@@ -677,7 +661,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">임시 저장 포화</div>
-        <h2>처분장으로 가기 전, 원전 내부 저장고에도 이미 압력이 쌓임</h2>
+        <h2>처분 전 단계부터 쌓이는 원전 내부 저장 압력</h2>
         <div class="grid-2">
           <div class="image-stage contain">
             <img src="assets/image6.png" alt="원전 부지별 중저준위 폐기물 저장 포화율 표">
@@ -700,13 +684,13 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">일반 폐기물과의 차이</div>
-        <h2>방폐물은 냄새나 침출수보다 먼저 <span class="red-text">방사선</span>을 관리해야 함</h2>
+        <h2>방폐물 관리는 침출수보다 <span class="red-text">방사선 차폐</span>가 우선</h2>
         <div class="grid-3">
           <div class="card red"><h3>방사능 존재</h3><p>핵종 붕괴에 따라 알파·베타·감마선 등이 방출될 수 있음</p></div>
           <div class="card amber"><h3>시간</h3><p>반감기를 거쳐 자연 감소하지만 안전 수준까지 시간이 필요</p></div>
           <div class="card blue"><h3>차폐와 격리</h3><p>콘크리트·금속·암반 등으로 외부 환경과 분리해야 함</p></div>
         </div>
-        <p class="big-quote" style="margin-top:6vh">따라서 기준은 “버린다”가 아니라<br><span class="accent">막고, 가두고, 감시한다</span>입니다.</p>
+        <p class="big-quote" style="margin-top:6vh">기준은 “버린다”가 아니라<br><span class="accent">막고, 가두고, 감시한다</span></p>
         <div class="source">근거: KORAD 중저준위방폐물 정의, IAEA SSR-5 안전 요구사항</div>
         <div class="progress">05 / 20</div>
       </div>
@@ -716,13 +700,13 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">위험도 기반 분류</div>
-        <h2>위험도가 높아질수록 더 깊고 강한 격리가 필요함</h2>
+        <h2>위험도가 높을수록 더 깊고 강한 격리 필요</h2>
         <div class="image-stage contain" style="height:42vh; margin-top:3vh; max-width:92%;">
           <img src="assets/iaea_disposal_types.jpg" alt="IAEA 방사성폐기물 처분시설 유형 분류도">
         </div>
         <div class="grid-2" style="height:auto; margin-top:2.2vh; grid-template-columns:1fr 1fr;">
-          <div class="card cyan"><h3>핵심 메시지</h3><p>처분시설은 폐기물의 hazard potential에 맞춰 단계적으로 선택됩니다.</p></div>
-          <div class="card amber"><h3>발표 연결</h3><p>중·저준위는 고준위와 다르게 동굴·표층·매립형 처분으로 나누어 설명합니다.</p></div>
+          <div class="card cyan"><h3>핵심 메시지</h3><p>폐기물의 hazard potential에 맞춘 단계적 처분시설 선택</p></div>
+          <div class="card amber"><h3>발표 연결</h3><p>중·저준위는 동굴·표층·매립형 처분 중심으로 정리</p></div>
         </div>
         <div class="source">이미지: IAEA e-learning course thumbnail</div>
         <div class="progress">06 / 20</div>
@@ -733,7 +717,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">법적 분류 체계</div>
-        <h2>분류가 달라지면 처분 깊이와 방벽 구조도 달라짐</h2>
+        <h2>분류 변화는 처분 깊이와 방벽 구조 변화로 연결</h2>
         <div class="grid-3">
           <div class="card red"><h3>고준위</h3><p>사용후핵연료 등, 심층처분 중심</p></div>
           <div class="card amber"><h3>중준위</h3><p>차폐 필요성이 높고, 국내 설명에서는 동굴처분과 연결</p></div>
@@ -741,7 +725,7 @@
         </div>
         <div class="qr-note">
           <b>발표 포인트</b>
-          <p>“방사능 농도와 열 발생 정도가 분류 기준이고, 분류가 곧 처분방식 선택으로 이어진다”고 설명하면 됩니다.</p>
+          <p>방사능 농도와 열 발생 정도가 분류 기준, 분류는 처분방식 선택으로 연결</p>
         </div>
         <div class="source">근거: KORAD 중저준위방폐물 관리 개요, 사용자 DOCX</div>
         <div class="progress">07 / 20</div>
@@ -752,7 +736,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">발생원</div>
-        <h2>방폐물은 원전만이 아니라 병원·연구소·산업체에서도 발생</h2>
+        <h2>원전 밖 병원·연구소·산업체까지 이어지는 발생원</h2>
         <div class="grid-2">
           <div class="image-stage contain">
             <img src="assets/image12.png" alt="방사성폐기물 관리 흐름도">
@@ -771,7 +755,7 @@
         <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">발생량 현황</div>
-        <h2>2025년 2분기 통계는 시설별 발생량 차이를 보여줌</h2>
+        <h2>시설별 발생량 차이를 보여주는 2025년 2분기 통계</h2>
         <div class="image-stage contain" style="height:43vh; margin-top:3vh; max-width:92%;">
           <img src="assets/wacid_2025_q4_from_pdf.png" alt="2025년 2분기 시설별 방사성폐기물 발생량 그래프">
         </div>
@@ -780,7 +764,7 @@
           <div class="card blue"><h3>시설별</h3><p>발전소·연구기관 등 발생원이 함께 표시됨</p></div>
           <div class="card green"><h3>관리</h3><p>발생량은 저장·검사·처분 용량 계획과 연결</p></div>
         </div>
-        <div class="source">이미지: AudioPub 업로드 WACID 그래프 캡처</div>
+        <div class="source">이미지: 사용자 제공 PDF 내부 WACID 그래프 캡처</div>
         <div class="progress">09 / 20</div>
       </div>
     </section>
@@ -789,13 +773,13 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">관리 주체</div>
-        <h2>국내 방폐물 관리는 KORAD 중심의 전담 체계로 운영</h2>
+        <h2>KORAD 중심 국내 방폐물 관리 체계</h2>
         <div class="grid-3">
           <div class="card cyan"><h3>KORAD</h3><p>운반, 저장, 처리, 처분시설 운영과 안전관리 전담</p></div>
           <div class="card blue"><h3>원자력안전법</h3><p>안전 규제, 환경 방사능 감시, 처분 기준의 법적 기반</p></div>
           <div class="card green"><h3>방사성폐기물 관리법</h3><p>국가 기본계획, 관리기금, 처분사업 추진 근거</p></div>
         </div>
-        <p class="big-quote" style="margin-top:6vh">핵심은 <span class="accent">한 기관</span>이 아니라<br>법·규제·재원·시설이 연결된 체계입니다.</p>
+        <p class="big-quote" style="margin-top:6vh">핵심은 <span class="accent">한 기관</span>이 아니라<br>법·규제·재원·시설이 연결된 체계</p>
         <div class="source">근거: KORAD 기본정책, 사용자 DOCX</div>
         <div class="progress">10 / 20</div>
       </div>
@@ -805,7 +789,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">관리체계</div>
-        <h2>발생부터 처분 후 감시까지, 한 번의 처분이 아니라 전 과정 관리</h2>
+        <h2>발생부터 처분 후 감시까지 이어지는 전 과정 관리</h2>
         <div class="timeline" style="grid-template-columns:repeat(6,1fr)">
           <div class="step"><b>발생</b><p>발전소·병원·연구소</p></div>
           <div class="step" style="border-color:var(--amber)"><b>분류</b><p>핵종·농도·준위 확인</p></div>
@@ -842,7 +826,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">동굴 처분</div>
-        <h2>경주 1단계 방폐장은 지하 동굴처분 방식</h2>
+        <h2>경주 1단계 방폐장의 지하 동굴처분 방식</h2>
         <div class="grid-2">
           <div class="image-stage">
             <img src="assets/image11.png" alt="경주 방폐장 동굴처분시설 내부">
@@ -866,9 +850,9 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">동굴 구조</div>
-        <h2>동굴처분은 “깊이”보다도 방벽이 겹쳐지는 구조가 핵심</h2>
-        <div class="grid-2">
-          <div class="image-stage contain">
+        <h2>동굴처분의 핵심은 깊이보다 겹쳐진 방벽 구조</h2>
+        <div class="grid-2" style="grid-template-columns:1.25fr .75fr; gap:2.2vw;">
+          <div class="image-stage contain" style="height:54vh; min-height:0;">
             <img src="assets/image3.png" alt="경주 방폐장 동굴처분 개념도">
           </div>
           <div class="grid-3" style="grid-template-columns:1fr; margin-top:0">
@@ -886,7 +870,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">표층 처분</div>
-        <h2>저준위 이하 폐기물은 표층처분으로 처분 공간을 넓힐 수 있음</h2>
+        <h2>표층처분은 저준위 이하 처분 공간 확장 수단</h2>
         <div class="grid-2">
           <div class="image-stage contain">
             <img src="assets/image7.png" alt="표층처분시설 내부 사진">
@@ -909,11 +893,11 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">최신 처리기술 1</div>
-        <h2>마이크로파 기반 C-14 분리는 방출 핵종을 선택적으로 줄이는 접근</h2>
+        <h2>C-14 선택 분리로 방출 핵종 저감</h2>
         <div class="grid-2">
           <div>
-            <div class="card amber"><h3>기술 의미</h3><p>폐기물을 단순히 압축·소각하는 것이 아니라 특정 핵종을 분리해 관리 위험을 낮추는 방향입니다.</p></div>
-            <div class="card cyan" style="margin-top:2vh"><h3>주의점</h3><p>상용화 수준, 적용 대상, 경제성은 검증 자료를 기준으로 설명해야 합니다.</p></div>
+            <div class="card amber"><h3>기술 의미</h3><p>단순 압축·소각이 아닌 특정 핵종 분리를 통한 관리 위험 저감</p></div>
+            <div class="card cyan" style="margin-top:2vh"><h3>주의점</h3><p>상용화 수준, 적용 대상, 경제성은 검증 자료 기준으로 제한 설명</p></div>
           </div>
           <div class="image-stage">
             <img src="assets/image5.png" alt="마이크로파 기반 C-14 분리 장치">
@@ -928,7 +912,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">최신 처리기술 2</div>
-        <h2>화학적 분리는 처분 부피와 위험도를 동시에 낮추는 방향</h2>
+        <h2>화학적 분리로 처분 부피와 위험도 동시 저감</h2>
         <div class="grid-2">
           <div class="image-stage contain">
             <img src="assets/image9.png" alt="KAERI 우라늄폐기물 처리기술 도식">
@@ -951,7 +935,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">국내 시설 현황</div>
-        <h2>경주 방폐장은 동굴처분 운영에서 표층·매립형 확장으로 이동 중</h2>
+        <h2>경주 방폐장: 동굴처분에서 표층·매립형 확장으로</h2>
         <div class="grid-3">
           <div class="card amber"><h3>1단계</h3><p>동굴처분시설, 10만 드럼 규모, 운영 중</p></div>
           <div class="card cyan"><h3>2단계</h3><p>표층처분시설, 12.5만 드럼 규모, 저준위 이하 중심</p></div>
@@ -967,7 +951,7 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">환경 영향과 국제 기준</div>
-        <h2>안전성은 “사고가 없다”가 아니라, 실패해도 막는 구조를 설계하는 것</h2>
+        <h2>안전성은 실패해도 막는 구조에서 출발</h2>
         <div class="grid-3">
           <div class="card red"><h3>위험 경로</h3><p>용기 손상 → 지하수 접촉 → 토양·수계 이동 가능성</p></div>
           <div class="card amber"><h3>다중 방벽</h3><p>고형화체, 금속용기, 콘크리트, 암반이 연속 차폐</p></div>
@@ -975,7 +959,7 @@
         </div>
         <div class="qr-note">
           <b>IAEA 기준의 메시지</b>
-          <p>처분시설은 운영 중 안전뿐 아니라 폐쇄 후 장기 안전까지 입증해야 하는 시설입니다.</p>
+          <p>운영 중 안전뿐 아니라 폐쇄 후 장기 안전까지 입증해야 하는 시설</p>
         </div>
         <div class="source">근거: IAEA Safety Standards SSR-5, KORAD 기본정책</div>
         <div class="progress">19 / 20</div>
@@ -1004,8 +988,8 @@
         <div class="qa-wrap">
           <div>
             <div class="kicker">Q&A</div>
-            <h1 style="font-size:clamp(72px,8.6vw,140px)">질문<br>받겠습니다</h1>
-            <p class="subtitle" style="max-width:88%">발생량, 처분 방식, 경주 방폐장, 처리기술, 환경 감시 관점에서 질문해주시면 됩니다.</p>
+            <h1 style="font-size:clamp(64px,7.5vw,122px)">질문과<br>답변</h1>
+            <p class="subtitle" style="max-width:88%">발생량, 처분 방식, 경주 방폐장, 처리기술, 환경 감시 중심</p>
             <div class="pill-row">
               <span class="pill">방폐물 분류</span>
               <span class="pill">동굴·표층 처분</span>
@@ -1016,7 +1000,7 @@
             <div class="question-mark">?</div>
             <div class="card blue">
               <h3>핵심 답변 프레임</h3>
-              <p>위험도별로 분류하고, 처리기술로 줄이고, 다중 방벽으로 격리하고, 장기 감시로 확인합니다.</p>
+              <p>위험도별 분류 → 처리기술 저감 → 다중 방벽 격리 → 장기 감시</p>
             </div>
           </div>
         </div>
