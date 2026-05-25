@@ -72,9 +72,9 @@
 ### 10. 국내 발생량 현황
 이 그래프는 WACID 화면에 표시된 2025년 2분기 시설별 방사성폐기물 발생량을 200L 드럼 단위로 보여줍니다. 발전소별 발생량뿐 아니라 RI·연구기관 등 다양한 발생원이 함께 나타납니다. 발표에서는 세부 숫자를 모두 읽기보다, 방폐물 관리가 원전 내부 문제에만 국한되지 않는다는 점을 강조하면 됩니다.
 
-사용 이미지: `assets/nuke_plant_audiopub.jpg`  
-이미지 출처: AudioPub 업로드 이미지, WACID 그래프 캡처  
-링크: https://audiopub.co.kr/wp-content/uploads/2025/11/T_nuke-plant-2.jpg  
+사용 이미지: `assets/wacid_2025_q4_from_pdf.png`  
+이미지 출처: 사용자가 제공한 `pdf.pdf` 내부 이미지, WACID 그래프 캡처  
+원본 파일: `C:\Users\진현덕\Downloads\pdf.pdf`  
 원자료 후보: KINS WACID 시설별 방사성폐기물 발생량 통계
 
 ### 11. 관리 주체와 법적 근거
