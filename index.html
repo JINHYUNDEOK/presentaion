@@ -146,19 +146,9 @@
     .dark .subtitle, .dark .kicker { color: #c7d4e7; }
 
     .source {
-      position: absolute;
-      left: 5vw;
-      bottom: 3.2vh;
-      color: #7b8798;
-      font-size: clamp(10px, .82vw, 14px);
-      z-index: 3;
-      max-width: 64%;
-      padding: .22rem .52rem;
-      border-radius: 999px;
-      background: rgba(255,253,246,.74);
-      backdrop-filter: blur(5px);
+      display: none;
     }
-    .dark .source { color: #c5d1e5; background: rgba(18,28,49,.58); }
+    .dark .source { display: none; }
 
     .progress {
       position: absolute;
@@ -726,17 +716,15 @@
       <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">위험도 기반 분류</div>
-        <h2>모든 방폐물을 같은 방식으로 관리하면 안전하지도, 효율적이지도 않음</h2>
-        <div class="grid-2">
-          <div>
-            <div class="card cyan"><h3>중·저준위의 의미</h3><p>고준위처럼 강한 열을 내는 폐기물이 아니라도, 방사능 농도와 핵종 특성 때문에 별도 관리가 필요합니다.</p></div>
-            <div class="card amber" style="margin-top:2vh"><h3>경제성과 안전성</h3><p>위험도에 맞는 처분 방식을 적용해야 처분 공간과 비용을 합리적으로 쓸 수 있습니다.</p></div>
-          </div>
-          <div class="image-stage contain">
-            <img src="assets/image2.png" alt="방사성폐기물 처분시설 유형 분류도">
-          </div>
+        <h2>위험도가 높아질수록 더 깊고 강한 격리가 필요함</h2>
+        <div class="image-stage contain" style="height:42vh; margin-top:3vh; max-width:92%;">
+          <img src="assets/iaea_disposal_types.jpg" alt="IAEA 방사성폐기물 처분시설 유형 분류도">
         </div>
-        <div class="source">이미지: DOCX 제공 이미지 / 기준 설명: KORAD, IAEA</div>
+        <div class="grid-2" style="height:auto; margin-top:2.2vh; grid-template-columns:1fr 1fr;">
+          <div class="card cyan"><h3>핵심 메시지</h3><p>처분시설은 폐기물의 hazard potential에 맞춰 단계적으로 선택됩니다.</p></div>
+          <div class="card amber"><h3>발표 연결</h3><p>중·저준위는 고준위와 다르게 동굴·표층·매립형 처분으로 나누어 설명합니다.</p></div>
+        </div>
+        <div class="source">이미지: IAEA e-learning course thumbnail</div>
         <div class="progress">06 / 20</div>
       </div>
     </section>
@@ -780,24 +768,19 @@
     </section>
 
     <section class="slide">
-      <div class="canvas">
+        <div class="canvas">
         <div class="mark">▲</div>
         <div class="kicker">발생량 현황</div>
-        <h2>2025년 4분기 통계는 “원전 밖 발생원”도 함께 보여줌</h2>
-        <div class="grid-2">
-          <div class="image-stage contain">
-            <img src="assets/image1.png" alt="2025년 4분기 시설별 방사성폐기물 발생량 그래프">
-          </div>
-          <div>
-            <div class="metric"><strong>200L</strong><span>그래프 단위는 200L 드럼</span></div>
-            <ul class="slide-list">
-              <li>발전소별 발생량 외에도 RI·연구기관 발생원이 보임</li>
-              <li>해체·정비 일정에 따라 일시적 증가 가능</li>
-              <li>발생량은 처분 용량, 검사·저장시설 계획과 직접 연결</li>
-            </ul>
-          </div>
+        <h2>2025년 2분기 통계는 시설별 발생량 차이를 보여줌</h2>
+        <div class="image-stage contain" style="height:43vh; margin-top:3vh; max-width:92%;">
+          <img src="assets/nuke_plant_audiopub.jpg" alt="2025년 2분기 시설별 방사성폐기물 발생량 그래프">
         </div>
-        <div class="source">이미지: DOCX 제공 그래프 / 출처 후보: KINS WACID 2025년 4분기 통계</div>
+        <div class="grid-3" style="margin-top:2.1vh;">
+          <div class="card cyan"><h3>200L</h3><p>그래프 단위는 200L 드럼 기준</p></div>
+          <div class="card blue"><h3>시설별</h3><p>발전소·연구기관 등 발생원이 함께 표시됨</p></div>
+          <div class="card green"><h3>관리</h3><p>발생량은 저장·검사·처분 용량 계획과 연결</p></div>
+        </div>
+        <div class="source">이미지: AudioPub 업로드 WACID 그래프 캡처</div>
         <div class="progress">09 / 20</div>
       </div>
     </section>
