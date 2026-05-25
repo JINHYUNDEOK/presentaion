@@ -235,6 +235,20 @@
       line-height: 1.45;
       font-weight: 650;
     }
+    .facility-img {
+      height: 22vh;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: -1rem -1rem 1rem;
+      background: white;
+      border: 1px solid rgba(255,255,255,.72);
+    }
+    .facility-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
 
     .image-stage {
       width: 100%;
@@ -737,15 +751,20 @@
       <div class="canvas">
         <div class="kicker">정은희 · 10p</div>
         <h2>방사성폐기물 관리는 발생부터 처분까지 이어지는 체계</h2>
-        <div class="timeline" style="grid-template-columns:repeat(6,1fr)">
-          <div class="step"><b>발생</b><p>원전·병원·연구소</p></div>
-          <div class="step" style="border-color:var(--amber)"><b>분류</b><p>핵종·농도·준위 확인</p></div>
-          <div class="step" style="border-color:var(--blue)"><b>처리</b><p>압축·소각·고형화</p></div>
-          <div class="step" style="border-color:var(--green)"><b>운반</b><p>전용 용기·검사</p></div>
-          <div class="step" style="border-color:var(--red)"><b>처분</b><p>동굴·표층·매립형</p></div>
-          <div class="step" style="border-color:var(--cyan)"><b>감시</b><p>지하수·토양·공기</p></div>
+        <div class="grid-2" style="grid-template-columns:.92fr 1.08fr; gap:2.2vw; height:calc(100% - 17vh); margin-top:3vh">
+          <div class="image-stage contain" style="height:100%; min-height:0">
+            <img src="assets/image12.png" alt="방사성폐기물 관리 흐름도">
+          </div>
+          <div class="timeline" style="grid-template-columns:repeat(2,1fr); margin-top:0; gap:1vw; height:auto">
+            <div class="step" style="min-height:12vh"><b>발생</b><p>원전·병원·연구소</p></div>
+            <div class="step" style="border-color:var(--amber); min-height:12vh"><b>분류</b><p>핵종·농도·준위 확인</p></div>
+            <div class="step" style="border-color:var(--blue); min-height:12vh"><b>처리</b><p>압축·소각·고형화</p></div>
+            <div class="step" style="border-color:var(--green); min-height:12vh"><b>운반</b><p>전용 용기·검사</p></div>
+            <div class="step" style="border-color:var(--red); min-height:12vh"><b>처분</b><p>동굴·표층·매립형</p></div>
+            <div class="step" style="border-color:var(--cyan); min-height:12vh"><b>감시</b><p>지하수·토양·공기</p></div>
+          </div>
         </div>
-        <div class="source">근거: KORAD 중·저준위 방폐물 인도 기준 및 전주기 관리 프로세스</div>
+        <div class="source">이미지: DOCX 제공 관리 흐름도 / 근거: KORAD 중·저준위 방폐물 인도 기준 및 전주기 관리 프로세스</div>
         <div class="progress"></div>
       </div>
     </section>
@@ -772,20 +791,25 @@
       <div class="canvas">
         <div class="kicker">최재웅 · 12p</div>
         <h2>동굴 처분: 경주 방폐장 1단계 국내 사례</h2>
-        <div class="grid-2">
-          <div class="image-stage">
-            <img src="assets/image11.png" alt="경주 방폐장 동굴처분시설 내부">
+        <div class="grid-2" style="grid-template-columns:1.18fr .82fr; gap:2.2vw; height:calc(100% - 17vh); margin-top:3vh">
+          <div class="image-stage contain" style="height:100%; min-height:0">
+            <img src="assets/image3.png" alt="경주 방폐장 동굴처분 개념도">
           </div>
-          <div>
-            <div class="metric"><strong>10만</strong><span>DOCX 기준 1단계 동굴처분시설 처분 규모, 200L 드럼 기준</span></div>
-            <ul class="slide-list">
-              <li>지하 암반 속 터널과 사일로에 폐기물 격리</li>
-              <li>폐기물 용기, 콘크리트 구조물, 자연 암반의 다중 방벽</li>
-              <li>최근 표층처분까지 더해 복합 처분 체계로 확장</li>
-            </ul>
+          <div style="display:grid; grid-template-rows:1fr auto; gap:1.8vh">
+            <div class="image-stage" style="height:30vh; min-height:0">
+              <img src="assets/image11.png" alt="경주 방폐장 동굴처분시설 내부">
+            </div>
+            <div>
+              <div class="metric"><strong>10만</strong><span>1단계 동굴처분시설 처분 규모, 200L 드럼 기준</span></div>
+              <ul class="slide-list" style="margin-top:2vh">
+                <li>지하 암반 속 터널과 사일로에 폐기물 격리</li>
+                <li>용기·콘크리트·암반의 다중 방벽</li>
+                <li>표층처분까지 더한 복합 처분 체계</li>
+              </ul>
+            </div>
           </div>
         </div>
-        <div class="source">이미지: DOCX 제공 사진 / 근거: KORAD, 영남일보, 한겨레</div>
+        <div class="source">이미지: DOCX 제공 동굴처분 구조도 및 내부 사진 / 근거: KORAD, 영남일보, 한겨레</div>
         <div class="progress"></div>
       </div>
     </section>
@@ -889,13 +913,22 @@
       <div class="canvas">
         <div class="kicker">이진우 · 18p</div>
         <h2>해외 주요시설 비교: 지형과 정책에 따른 차이</h2>
-        <div class="grid-3">
-          <div class="card amber"><h3>미국 WIPP</h3><p>뉴멕시코 지하 암염층 활용, 장기 안전성 평가와 환경 감시 중시</p></div>
-          <div class="card cyan"><h3>일본</h3><p>콘크리트 기반 천층처분, 후쿠시마 이후 주민 소통과 수용성 중요</p></div>
-          <div class="card green"><h3>스페인 El Cabril</h3><p>콘크리트 구조물과 다중 차폐층, 토양·지하수 지속 조사</p></div>
+        <div class="grid-3" style="margin-top:3vh">
+          <div class="card amber" style="padding:1rem 1.2rem 1.35rem">
+            <div class="facility-img"><img src="assets/wipp_aerial_doe.jpg" alt="미국 WIPP 방폐물 처분시설 항공사진"></div>
+            <h3>미국 WIPP</h3><p>뉴멕시코 지하 암염층 활용, 장기 안전성 평가와 환경 감시 중시</p>
+          </div>
+          <div class="card cyan" style="padding:1rem 1.2rem 1.35rem">
+            <div class="facility-img"><img src="assets/jnfl_disposal.jpg" alt="일본 JNFL 저준위 방사성폐기물 처분시설"></div>
+            <h3>일본 JNFL</h3><p>콘크리트 기반 천층처분, 후쿠시마 이후 주민 소통과 수용성 중요</p>
+          </div>
+          <div class="card green" style="padding:1rem 1.2rem 1.35rem">
+            <div class="facility-img"><img src="assets/el_cabril_enresa.jpg" alt="스페인 El Cabril 방사성폐기물 처분시설"></div>
+            <h3>스페인 El Cabril</h3><p>콘크리트 구조물과 다중 차폐층, 토양·지하수 지속 조사</p>
+          </div>
         </div>
-        <p class="big-quote" style="margin-top:6vh">공통점은 <span class="accent">장기 격리</span>와 <span class="green-text">환경 감시</span>, 차이는 <span class="amber-text">지질 조건</span></p>
-        <div class="source">근거: 사용자 제공 DOCX의 해외 주요시설 비교 대본</div>
+        <p class="big-quote" style="margin-top:3.5vh">공통점은 <span class="accent">장기 격리</span>와 <span class="green-text">환경 감시</span>, 차이는 <span class="amber-text">지질 조건</span></p>
+        <div class="source">이미지: DOE WIPP, JNFL disposal, ENRESA El Cabril / 근거: 사용자 제공 DOCX의 해외 주요시설 비교 대본</div>
         <div class="progress"></div>
       </div>
     </section>

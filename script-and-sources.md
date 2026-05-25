@@ -8,6 +8,7 @@
 - DOCX에 삽입된 이미지는 `radiation_html/assets/image*.png`로 추출해 사용했다.
 - 7페이지가 아니라 DOCX 지정 순서에 맞춰 14페이지에서 IAEA 처분시설 유형 이미지를 사용했다.
 - 8페이지 발생량 그래프는 사용자가 제공한 `pdf.pdf`에서 추출한 WACID 그래프를 사용했다.
+- 18페이지 해외시설 비교에는 미국 DOE WIPP, 일본 JNFL, 스페인 ENRESA El Cabril 페이지의 시설 이미지를 추가했다.
 - 슬라이드 화면 좌하단의 출처 표기는 숨겼고, 출처 복원은 이 MD 파일에서 하도록 정리했다.
 
 ## 슬라이드별 대본
@@ -72,6 +73,8 @@
 ### 10. 방사성 폐기물 관리체계 간략 소개
 방사성폐기물 관리는 발생부터 사후 감시까지 단계적으로 이어집니다. 먼저 원전, 병원, 연구소, 산업체에서 폐기물이 발생하면 핵종과 방사능 농도를 기준으로 분류합니다. 이후 압축, 소각, 고형화 같은 처리를 통해 부피를 줄이거나 안정적인 형태로 만듭니다. 처리된 폐기물은 전용 용기와 운반 기준을 거쳐 처분시설로 이동하고, 위험도에 따라 동굴처분, 표층처분, 매립형 처분으로 격리됩니다. 처분 이후에도 지하수, 토양, 공기, 주변 방사선 수치를 장기적으로 감시합니다.
 
+사용 이미지: `assets/image12.png`  
+이미지 출처: DOCX 제공 관리 흐름도  
 근거 출처: KORAD 중·저준위 방폐물 인도 기준 및 전주기 관리 프로세스
 
 ### 11. 처분 방식 분류: 천층 처분 vs 심층 처분
@@ -84,8 +87,8 @@
 ### 12. 동굴 처분(천층처분) 국내 사례
 경주 방폐장 1단계 시설은 동굴처분 방식으로 운영되고 있습니다. 이 방식은 지표면에 바로 묻는 것이 아니라 지하 암반 속에 터널과 처분 공간을 만든 뒤 폐기물을 장기간 격리하는 방식입니다. 경주 1단계 동굴처분시설은 2015년부터 운영되었고, 중준위 이하 방폐물 약 10만 드럼을 처분할 수 있는 규모로 설명됩니다. 폐기물은 내부 사일로에 들어가고, 폐기물 용기, 콘크리트 구조물, 자연 암반이 여러 겹의 방벽 역할을 합니다. 최근에는 2단계 표층처분시설도 준공되어 경주 방폐장은 복합 처분 체계로 발전하고 있습니다.
 
-사용 이미지: `assets/image11.png`  
-이미지 출처: DOCX 제공 사진  
+사용 이미지: `assets/image3.png`, `assets/image11.png`  
+이미지 출처: DOCX 제공 동굴처분 구조도 및 경주 방폐장 내부 사진  
 근거 출처: KORAD, 영남일보, 한겨레  
 링크: https://www.yeongnam.com/web/view.php?key=20060629.010010704160001  
 링크: https://www.hani.co.kr/arti/society/environment/1056738.html
@@ -129,6 +132,21 @@ C-14는 탄소-14라는 방사성 동위원소입니다. 원전에서 사용된 
 
 ### 18. 해외 주요시설 비교
 해외에서도 각 나라의 지형과 정책에 맞춰 중·저준위 방사성폐기물을 관리하고 있습니다. 미국의 WIPP는 뉴멕시코 지하 암염층을 활용하는 시설로, 암염층이 시간이 지나며 틈을 메우는 특성을 장기 격리에 활용합니다. 일본은 콘크리트 기반 천층처분 방식을 사용하며, 후쿠시마 사고 이후 주민 소통과 수용성이 더 중요해졌습니다. 스페인의 El Cabril은 중·저준위 폐기물을 콘크리트 구조물 안에 넣고 다중 차폐층으로 관리합니다. 세 사례 모두 방식은 다르지만, 장기 격리와 환경 감시가 공통 핵심입니다.
+
+사용 이미지: `assets/wipp_aerial_doe.jpg`  
+이미지 설명: 미국 DOE Waste Isolation Pilot Plant(WIPP) 항공사진  
+출처: U.S. Department of Energy WIPP 페이지  
+링크: https://www.energy.gov/em/waste-isolation-pilot-plant-wipp
+
+사용 이미지: `assets/jnfl_disposal.jpg`  
+이미지 설명: 일본 JNFL 저준위 방사성폐기물 처분시설 관련 사진  
+출처: Japan Nuclear Fuel Limited disposal 페이지  
+링크: https://www.jnfl.jp/english/disposal.html
+
+사용 이미지: `assets/el_cabril_enresa.jpg`  
+이미지 설명: 스페인 ENRESA El Cabril 저장·처분 구역 사진  
+출처: ENRESA El Cabril 페이지  
+링크: https://www.enresa.es/eng/index/activities-and-projects/el-cabril
 
 자료 출처: 사용자 제공 DOCX의 해외 주요시설 비교 대본
 
@@ -176,6 +194,8 @@ C-14는 탄소-14라는 방사성 동위원소입니다. 원전에서 사용된 
 - `3~10 정은희`, `11~16 최재웅`, `17~24 이진우`, `25 Q&A` 흐름을 HTML과 대본 모두에 반영했다.
 - 기존에 별도 슬라이드로 분리했던 `임시저장 포화`와 `동굴 구조`는 DOCX 원래 흐름에 맞춰 3p와 12p 내용 안으로 흡수했다.
 - 빠져 있던 `해외 주요시설 비교`, `입지 선정 기준`, `국제 기준 준수`, `전 과정 요약`, `국내 과제`, `기술 혁신과 사회적 수용성` 슬라이드를 추가했다.
+- 10p에 DOCX 제공 관리 흐름도 이미지를 추가했고, 12p에는 동굴 구조도와 내부 사진을 함께 배치했다.
+- 18p에는 해외시설 비교 카드별로 DOE WIPP, JNFL, ENRESA El Cabril 이미지를 추가했다.
 
 ## 공식·준공식 링크 목록
 
@@ -187,3 +207,6 @@ C-14는 탄소-14라는 방사성 동위원소입니다. 원전에서 사용된 
 - 대한민국 정책브리핑, 제3차 중·저준위 방사성폐기물 관리 기본계획: https://m.korea.kr/briefing/pressReleaseView.do?endDate=2026-03-23&newsId=156750347&pageIndex=1&period=&repCode=&repCodeType=&srchWord=&startDate=2025-03-23
 - IAEA Safety Standards SSR-5: https://www.iaea.org/publications/8420/disposal-of-radioactive-waste
 - IAEA e-learning disposal facility image: https://elearning.iaea.org/m2/pluginfile.php/285279/course/overviewfiles/course%20thumbnail.jpg
+- U.S. DOE WIPP page: https://www.energy.gov/em/waste-isolation-pilot-plant-wipp
+- JNFL low-level radioactive waste disposal page: https://www.jnfl.jp/english/disposal.html
+- ENRESA El Cabril page: https://www.enresa.es/eng/index/activities-and-projects/el-cabril
