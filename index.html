@@ -286,6 +286,11 @@
       border: 1px solid rgba(255,255,255,.78);
       box-shadow: 0 24px 58px rgba(31,46,68,.08);
     }
+    .donut-panel {
+      display: grid;
+      place-items: center;
+      gap: 2.2vh;
+    }
     .donut {
       width: min(30vw, 360px);
       aspect-ratio: 1;
@@ -304,8 +309,10 @@
     .donut-label {
       position: absolute;
       inset: 0;
-      display: grid;
-      place-items: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       text-align: center;
       z-index: 1;
       font-weight: 950;
@@ -313,8 +320,36 @@
       letter-spacing: -.05em;
       line-height: 1;
     }
-    .donut-label strong { display:block; font-size: clamp(58px, 6vw, 112px); }
-    .donut-label span { display:block; margin-top:.4vh; font-size: clamp(18px, 1.3vw, 25px); color: var(--muted); letter-spacing: -.02em; }
+    .donut-label strong { display:block; font-size: clamp(58px, 5.6vw, 104px); }
+    .donut-label span { display:block; margin-top:.8vh; font-size: clamp(17px, 1.05vw, 21px); color: var(--muted); letter-spacing: -.02em; }
+    .donut-legend {
+      width: min(30vw, 390px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8vw;
+    }
+    .donut-legend span {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: .5rem;
+      padding: .75rem .9rem;
+      border-radius: 999px;
+      background: rgba(255,255,255,.72);
+      color: #314052;
+      font-size: clamp(14px, .95vw, 18px);
+      font-weight: 850;
+      letter-spacing: -.03em;
+      box-shadow: 0 14px 28px rgba(31,46,68,.08);
+    }
+    .donut-legend i {
+      width: .72rem;
+      height: .72rem;
+      border-radius: 50%;
+      flex: 0 0 auto;
+    }
+    .donut-legend .cyan-dot { background: var(--cyan); }
+    .donut-legend .amber-dot { background: var(--amber); }
 
     .image-stage {
       width: 100%;
@@ -769,12 +804,18 @@
         <h2>발생원은 원전 중심이지만 의료·연구·산업까지 확장</h2>
         <div class="grid-2">
           <div class="donut-wrap">
-            <div class="donut">
-              <div class="donut-label"><strong>90%+</strong><span>원전 운영·정비·해체</span></div>
+            <div class="donut-panel">
+              <div class="donut">
+                <div class="donut-label"><strong>90%+</strong><span>원전 계열 발생</span></div>
+              </div>
+              <div class="donut-legend">
+                <span><i class="cyan-dot"></i>원전 운영·정비·해체</span>
+                <span><i class="amber-dot"></i>의료·연구·산업</span>
+              </div>
             </div>
           </div>
           <div>
-            <div class="card cyan"><h3>원자력 발전소</h3><p>정상 운영, 계획예방정비, 해체 과정에서 작업복·필터·수지·금속류 발생</p></div>
+            <div class="card cyan"><h3>원자력 발전소</h3><p>운영·정비·해체 과정에서 작업복·필터·수지·금속류 발생</p></div>
             <div class="card green" style="margin-top:2vh"><h3>비원전 분야</h3><p>병원 RI, 연구소 핵물질 연구, 산업체 비파괴검사와 제품 멸균</p></div>
             <div class="card amber" style="margin-top:2vh"><h3>핵심 해석</h3><p>대부분은 원전에서 발생하지만, 관리 범위는 의료·연구·산업까지 확장</p></div>
           </div>
