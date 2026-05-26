@@ -262,6 +262,33 @@
       font-weight: 800;
       line-height: 1.32;
     }
+    .barrier-hero {
+      height: 49vh;
+      margin-top: 2.4vh;
+      border-radius: 24px;
+      background: rgba(255,255,255,.95);
+      box-shadow: 0 24px 58px rgba(0,0,0,.18);
+      overflow: hidden;
+    }
+    .barrier-hero img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      display: block;
+    }
+    .dark .barrier-strip {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25vw;
+      margin-top: 2vh;
+    }
+    .dark .barrier-strip .card {
+      padding: 1.25rem 1.35rem;
+      border-radius: 22px;
+      box-shadow: none;
+    }
+    .dark .barrier-strip h3 {
+      font-size: clamp(24px, 1.8vw, 34px);
+    }
     .facility-img {
       height: 22vh;
       border-radius: 20px;
@@ -1124,15 +1151,13 @@
       <div class="canvas dark">
         <div class="kicker">이진우 · 24p</div>
         <h2 style="max-width:88%">다중방벽 시스템과 주민 신뢰 확보</h2>
-        <div class="grid-2" style="grid-template-columns:1.04fr .96fr; gap:2.2vw; height:calc(100% - 17vh); margin-top:3vh">
-          <div class="image-stage contain" style="height:100%; min-height:0">
-            <img src="assets/multi_barrier_system.svg" alt="사용후핵연료, 처분용기, 공학적 방벽, 자연 방벽으로 구성된 다중방벽 시스템 도식">
-          </div>
-          <div>
-            <div class="card cyan tight"><h3>처리 기술</h3><p>압축·소각·고형화로 부피와 위험도 저감</p></div>
-            <div class="card amber tight" style="margin-top:2vh"><h3>다중 방벽</h3><p>처분용기·공학적 방벽·자연 방벽을 단계적으로 결합</p></div>
-            <div class="card green tight" style="margin-top:2vh"><h3>주민 동의</h3><p>정보 공개와 장기 소통으로 신뢰 형성</p></div>
-          </div>
+        <div class="barrier-hero">
+          <img src="assets/multi_barrier_system.svg" alt="사용후핵연료 심층처분 개념도: 피복관, 처분용기, 뒷채움재, 완충재, 자연방벽, 수직갱, 처분터널 및 처분공">
+        </div>
+        <div class="grid-3 barrier-strip">
+          <div class="card cyan tight"><h3>처리 기술</h3><p>압축·소각·고형화로 부피와 위험도 저감</p></div>
+          <div class="card amber tight"><h3>다중 방벽</h3><p>처분용기·공학적 방벽·자연 방벽을 단계적으로 결합</p></div>
+          <div class="card green tight"><h3>주민 동의</h3><p>정보 공개와 장기 소통으로 신뢰 형성</p></div>
         </div>
         <div class="source"></div>
         <div class="progress"></div>
